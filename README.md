@@ -1,4 +1,4 @@
-####Java Version
+#### Java Version
 OpenJDK 11
 ```
 wb-issues teimatinim$ java --version
@@ -7,7 +7,7 @@ OpenJDK Runtime Environment 18.9 (build 11.0.1+13)
 OpenJDK 64-Bit Server VM 18.9 (build 11.0.1+13, mixed mode)
 ```
 
-####Compilation
+#### Compilation
 mvn package... this will create a ready to run distribution under ./owb-issues.distribution/target/owb-issues.distribution-1.0-SNAPSHOT-dist
 ```
 teimatinim$ mvn package
