@@ -1,14 +1,15 @@
 ####Java Version
-`
+OpenJDK 11
+```
 wb-issues teimatinim$ java --version
 openjdk 11.0.1 2018-10-16
 OpenJDK Runtime Environment 18.9 (build 11.0.1+13)
 OpenJDK 64-Bit Server VM 18.9 (build 11.0.1+13, mixed mode)
-`
+```
 
 ####Compilation
 mvn package... this will create a ready to run distribution under ./owb-issues.distribution/target/owb-issues.distribution-1.0-SNAPSHOT-dist
-`
+```
 teimatinim$ mvn package
 [INFO] Scanning for projects...
 [INFO] ------------------------------------------------------------------------
@@ -79,7 +80,7 @@ teimatinim$ mvn package
 [INFO] Total time: 3.043 s
 [INFO] Finished at: 2018-10-31T17:30:32-06:00
 [INFO] ------------------------------------------------------------------------
-`
+```
 
 #### ChangeDir to distribution folder
 teimatinim$ cd ./owb-issues.distribution/target/owb-issues.distribution-1.0-SNAPSHOT-dist
@@ -92,7 +93,7 @@ two sh ready to run...
 
 #####entrypoint-classpath.sh:
 This file execute the sample project by using -classpath instead of modules. This works fine!
-`
+```
 teimatinim$ ./entrypoint-classpath.sh 
 Oct 31, 2018 5:35:55 PM org.apache.webbeans.lifecycle.AbstractLifeCycle bootstrapApplication
 INFO: OpenWebBeans Container is starting...
@@ -110,11 +111,11 @@ WARNING: Please consider reporting this to the maintainers of org.apache.webbean
 WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
 WARNING: All illegal access operations will be denied in a future release
 Init...
-`
+```
 
 #####entrypoint.sh
 This file executes the sample project using the module system (jigsaw). This one fails.
-`
+```
 teimatinim$ ./entrypoint.sh 
 Oct 31, 2018 5:37:17 PM org.apache.webbeans.lifecycle.AbstractLifeCycle bootstrapApplication
 INFO: OpenWebBeans Container is starting...
@@ -154,7 +155,7 @@ Exception in thread "main" java.lang.NullPointerException
         at openwebbeans.impl@2.0.7/org.apache.webbeans.container.BeanManagerImpl.fireEvent(BeanManagerImpl.java:453)
         at openwebbeans.impl@2.0.7/org.apache.webbeans.container.InjectableBeanManager.fireEvent(InjectableBeanManager.java:109)
         at redwine.sensor/com.beuwa.redwine.sensor.Main.main(Main.java:24)
-`
+```
 
 #FINAL NOTE
 If I remove the @ApplicationScoped from Initializer class, compile and run the sample again, it works!!!
