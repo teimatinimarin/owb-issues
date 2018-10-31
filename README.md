@@ -157,7 +157,7 @@ Exception in thread "main" java.lang.NullPointerException
         at redwine.sensor/com.beuwa.redwine.sensor.Main.main(Main.java:24)
 ```
 
-#FINAL NOTE
+# FINAL NOTE
 If I remove the @ApplicationScoped from Initializer class, compile and run the sample again, it works!!!
 
 So... somehow, the issue is related with this @ApplicationScoped annotation and the JigSaw component in Java 11.
