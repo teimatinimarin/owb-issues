@@ -91,7 +91,7 @@ teimatinim$ chmod 700 entrypoint*
 #### Final Explanation
 two sh ready to run...
 
-#####entrypoint-classpath.sh:
+##### entrypoint-classpath.sh:
 This file execute the sample project by using -classpath instead of modules. This works fine!
 ```
 teimatinim$ ./entrypoint-classpath.sh 
@@ -113,7 +113,7 @@ WARNING: All illegal access operations will be denied in a future release
 Init...
 ```
 
-#####entrypoint.sh
+##### entrypoint.sh
 This file executes the sample project using the module system (jigsaw). This one fails.
 ```
 teimatinim$ ./entrypoint.sh 
